@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zwigato - Home</title>
+    <script src="./CSS & JS files/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS & JS files/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <a href="#" class="nav-icon">
+            <i class="fa-solid fa-house-chimney" style="color: orange"></i>
+            <span style="color: orange">Home</span>
+        </a>
+
+        <a href="#" class="nav-icon">
+            <i class="fa-solid fa-heart"></i>
+            <span>Wishlist</span>
+        </a>
+
+        <a href="#" class="nav-icon">
+            <i class="fa-solid fa-bowl-food"></i>
+            <span>Restaurants</span>
+        </a>
+
+        <a href="" class="nav-icon" onclick="cartbtn()">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="">Cart</span>
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <!-- Logo & Search Bar & Profile Login Code -->
+        <section class="logoBlock">
+            <img src="./assets/zwigato logo.png" alt="Logo" height="65px"
+                style="margin-left: -80px; margin-right: 30px;position: relative">
+            <input type="text" placeholder="🔍 What would you like to eat ?" class="search-bar text-first">
+
+            <!-- Profile Login Code -->
+            <div class="d-inline ms-4">
+                <Button class="btn pb-3 fs-5">
+                    <i class="fa-regular fa-2xl fa-circle-user"></i>
+                    <span class="text-sec ms-2 fs-3">Log In</span>
+                </Button>
+            </div>
+        </section>
+
+        <!-- Main Food Section -->
+        <div class="foodsection">
+            <!-- Carousel -->
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./assets/carousel-1.png" class="d-block w-100 rounded-4" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/carousel-2.png" class="d-block w-100 rounded-4" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/carousel-3.png" class="d-block w-100 rounded-4" alt="...">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Suggested optional Links -->
+            <div class="suggested-links d-flex justify-content-between mt-4">
+                <a href="#">
+                    <i class="fa-solid fa-xl fa-location-dot" style="color: orange;"></i>
+                    <span class="text-sec">&nbsp;Nearby</span>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-xl fa-angles-up" style="color: orange;"></i>
+                    <span class="text-sec">&nbsp;Promotion</span>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-bell-concierge fa-xl" style="color: orange;"></i>
+                    <span class="text-sec">&nbsp;New Comers</span>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-xl fa-award" style="color: orange;"></i>
+                    <span class="text-sec">&nbsp;Best Sellers</span>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-xl fa-star" style="color: orange;"></i>
+                    <span class="text-sec">&nbsp;Top Rated</span>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-xl fa-bars" style="color: orange;"></i>
+                    <span class="text-sec">&nbsp;All</span>
+                </a>
+            </div>
+
+            <!-- Food items cards -->
+            <section class="mt-5">
+                <div class="row justify-content-between px-3 mb-4">
+                    <div class="col-lg-4 col-md-6 card  border-0" style="width: 300px;">
+                        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/9/17/d26bdfca-3b50-41ea-87e1-e7f9a6b0581d_503003.jpg"
+                            class="card-img item-image" alt="...">
+                        <button class="wishlist" onclick="showLike(this)"><i class="fa-regular fa-heart"></i></button>
+                        <div class="card-body mt-n1">
+                            <span class="text-sec item-name">Chicken Biryani</span><br>
+                            <span class="text-first item-price">₹250</span>
+                            <button class="bttn text-first float-end">Add</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 card  border-0" style="width: 300px;">
+                        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/FOOD_CATALOG/IMAGES/CMS/2026/1/8/356f8426-2bc6-4f4e-b1b6-023d9c902389_878ddb6e-cd4b-4624-a46a-0e56b4b5287c.jpg"
+                            class="card-img item-image" alt="...">
+                        <button class="wishlist" onclick="showLike(this)"><i class="fa-regular fa-heart"></i></button>
+                        <div class="card-body mt-n1">
+                            <span class="text-sec item-name">South Indian Thali</span><br>
+                            <span class="text-first item-price">₹120</span>
+                            <button class="bttn text-first float-end">Add</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 card  border-0" style="width: 300px;">
+                        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/5/16/cfed8cca-94d0-44e8-ade8-0b92a935d990_24787ddf-f973-4bd0-95bc-779044c8ed59.jpg"
+                            class="card-img item-image" alt="...">
+                        <button class="wishlist" onclick="showLike(this)"><i class="fa-regular fa-heart"></i></button>
+                        <div class="card-body mt-n1">
+                            <span class="text-sec item-name">Veg Biryani</span><br>
+                            <span class="text-first item-price">₹170</span>
+                            <button class="bttn text-first float-end">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-between px-3">
+                    <div class="col-lg-4 col-md-6 card  border-0" style="width: 300px;">
+                        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/FOOD_CATALOG/IMAGES/CMS/2025/3/26/c504a56e-b1be-4f1a-baf4-8739e7629d66_ac755b15-9768-4bcd-b1c5-b2e662426e1b.jpg"
+                            class="card-img item-image" alt="...">
+                        <button class="wishlist" onclick="showLike(this)"><i class="fa-regular fa-heart"></i></button>
+                        <div class="card-body mt-n1">
+                            <span class="text-sec item-name">Butter Chicken</span><br>
+                            <span class="text-first item-price">₹220</span>
+                            <button class="bttn text-first float-end">Add</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 card  border-0" style="width: 300px;">
+                        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/9/29/63db73bc-acfc-424d-9c3c-9ab827ed4913_1219702.jpg"
+                            class="card-img item-image" alt="...">
+                        <button class="wishlist" onclick="showLike(this)"><i class="fa-regular fa-heart"></i></button>
+                        <div class="card-body mt-n1">
+                            <span class="text-sec item-name">Burger Combo</span><br>
+                            <span class="text-first item-price">₹130</span>
+                            <button class="bttn text-first float-end">Add</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 card  border-0" style="width: 300px;">
+                        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/98f4a7da3616d121227e0d41b045d69b"
+                            class="card-img item-image" alt="...">
+                        <button class="wishlist" onclick="showLike(this)"><i class="fa-regular fa-heart"></i></button>
+                        <div class="card-body mt-n1">
+                            <span class="text-sec item-name">Paneer Butter Masala</span><br>
+                            <span class="text-first item-price">₹190</span>
+                            <button class="bttn text-first float-end">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-between px-3">
+                    <div class="col-lg-4 col-md-6 card  border-0" style="width: 300px;">
+                        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2026/1/23/a276c72a-aa2d-4dc8-bb2c-1dd3414b05c4_740521.JPG"
+                            class="card-img item-image" alt="...">
+                        <button class="wishlist" onclick="showLike(this)"><i class="fa-regular fa-heart"></i></button>
+                        <div class="card-body mt-n1">
+                            <span class="text-sec item-name">Cheese Pasta</span><br>
+                            <span class="text-first item-price">₹220</span>
+                            <button class="bttn text-first float-end">Add</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 card  border-0" style="width: 300px;">
+                        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/3/21/2dc3b714-f0b8-4a86-8be9-73fb095102fc_29673.jpg"
+                            class="card-img item-image" alt="...">
+                        <button class="wishlist" onclick="showLike(this)"><i class="fa-regular fa-heart"></i></button>
+                        <div class="card-body mt-n1">
+                            <span class="text-sec item-name">Butter Scotch IceCream</span><br>
+                            <span class="text-first item-price">₹130</span>
+                            <button class="bttn text-first float-end">Add</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 card  border-0" style="width: 300px;">
+                        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/5db28ee7aed5c06a08111207a24c6a2c"
+                            class="card-img item-image" alt="...">
+                        <button class="wishlist" onclick="showLike(this)"><i class="fa-regular fa-heart"></i></button>
+                        <div class="card-body mt-n1">
+                            <span class="text-sec item-name">GudBud Ice-Cream</span><br>
+                            <span class="text-first item-price">₹190</span>
+                            <button class="bttn text-first float-end">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- The Cart Section -->
+        <div class="cartSection shadow mt-1">
+            <div class="showSection p-5 pt-4">
+
+                <h3 class="text-warning fw-bold mb-4">
+                    🍽️ Recommended For You
+                </h3>
+
+                <div class="showImages d-flex gap-3 mb-3">
+                    <div class="col">
+                        <img src="./assets/show-1.png" class="img-fluid rounded-4 shadow" alt="">
+                        <h4 class="text-sec">Burgers</h4>
+                    </div>
+
+                    <div class="col">
+                        <img src="./assets/show-2.png" class="img-fluid rounded-4 shadow" alt="">
+                        <h4 class="text-sec">Ice-Creams</h4>
+                    </div>
+                </div>
+
+                <div class="showImages d-flex gap-3 mb-3">
+                    <div class="col">
+                        <img src="./assets/show-3.png" class="img-fluid rounded-4 shadow" alt="">
+                        <h4 class="text-sec">Chinese</h4>
+                    </div>
+
+                    <div class="col">
+                        <img src="./assets/show-4.png" class="img-fluid rounded-4 shadow" alt="">
+                        <h4 class="text-sec">Pizza's</h4>
+                    </div>
+                </div>
+
+                <div class="showImages d-flex gap-3 mb-3">
+                    <div class="col">
+                        <img src="./assets/show-2.png" class="img-fluid rounded-4 shadow" alt="">
+                        <h4 class="text-sec">Ice-Creams</h4>
+                    </div>
+
+                    <div class="col">
+                        <img src="./assets/show-1.png" class="img-fluid rounded-4 shadow" alt="">
+                        <h4 class="text-sec">Burgers</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cart & Billing Section -->
+            <div class="cart">
+                <span class="text-sec fs-2 ms-4 mb-2">My Orders :</span>
+                <div class="cartItems"></div>
+                <div class="amt">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="text-sec">Sub Total :</span>
+                        <span id="cartSubtotal" class="text-first">₹0</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="text-sec">Delivery Fee :</span>
+                        <span id="cartDeliveryFee" class="text-first">₹0</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="text-sec">GST (18%) :</span>
+                        <span id="cartGst" class="text-first">₹0</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span class="text-sec">Total :</span>
+                        <span id="cartTotal" class="text-first">₹0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
